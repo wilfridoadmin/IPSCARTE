@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobro - Michell Leiva Castro Psicóloga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginSection">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Iniciar sesión</button>
+            <p id="loginError" style="color: red;"></p>
+        </form>
+    </div>
+
+    <div id="dashboardSection" style="display: none;">
+        <nav>
+            <button id="dashboardBtn">Dashboard</button>
+            <button id="productosBtn">Productos</button>
+            <button id="logoutBtn">Cerrar sesión</button>
+        </nav>
+
+        <div id="dashboardContent">
+            <h1>Dashboard</h1>
+            <form id="cobroForm">
+                <label for="nombreCompleto">Nombre Completo:</label>
+                <input type="text" id="nombreCompleto" required>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" required>
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones"></textarea>
+
+                <label for="productoSelect">Seleccionar Productos:</label>
+                <select id="productoSelect" multiple></select>
+                <button type="button" id="addProduct">Agregar Productos</button>
+
+                <h3>Productos Seleccionados</h3>
+                <ul id="productosList"></ul>
+                <p>Total: $<span id="total">0.00</span></p>
+                <button type="submit">Generar Cobro</button>
+                <button type="button" id="clearForm">Vaciar Formulario</button>
+            </form>
+
+            <h2>Facturas Realizadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Edad</th>
+                        <th>Observaciones</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cobrosList"></tbody>
+            </table>
+        </div>
+
+        <div id="productosContent" style="display: none;">
+            <h1>Productos</h1>
+            <form id="productoForm">
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input type="text" id="nombreProducto" required>
+                <label for="valorProducto">Valor del Producto:</label>
+                <input type="number" id="valorProducto" step="0.01" required>
+                <button type="submit">Guardar Producto</button>
+            </form>
+
+            <h2>Lista de Productos</h2>
+            <ul id="productoList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
