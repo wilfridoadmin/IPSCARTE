@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inicio - IPS Corazón de Arte Terapia</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a IPS Corazón de Arte Terapia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html" id="logout">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="services">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Psicología</li>
+                <li>Danza</li>
+                <li>Artes Plásticas</li>
+                <li>Asistencia en Tareas</li>
+            </ul>
+        </div>
+        
+
+        <section>
+            <h2>Lista de Pacientes</h2>
+            <button id="add-patient-btn">Agregar Paciente</button>
+            <table id="patients-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Fecha de Ingreso</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="patients-list">
+                    <!-- Los pacientes se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+            <p id="patient-count">Pacientes Atendidos: 0</p>
+        </section>
+
+        <section>
+            <h2>Noticias Recientes</h2>
+            <p>Ofrecemos un servicio de calidad. Tenemos profesionales increíbles.</p>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Paciente</h2>
+            <form id="patient-form">
+                <label for="patient-name">Nombre Completo:</label>
+                <input type="text" id="patient-name" placeholder="Nombre del Paciente" required>
+                
+                <label for="document-type">Tipo de Documento:</label>
+                <select id="document-type" required>
+                    <option value="">Selecciona</option>
+                    <option value="CC">CC</option>
+                    <option value="TI">TI</option>
+                    <option value="RC">RC</option>
+                    <option value="PT">PT</option>
+                    <option value="OTRO">Otro</option>
+                </select>
+                
+                <label for="document-number">Número de Documento:</label>
+                <input type="text" id="document-number" placeholder="Número de Documento" required>
+                
+                <label for="patient-age">Edad:</label>
+                <input type="number" id="patient-age" placeholder="Edad" required>
+                
+                <label for="birth-date">Fecha de Nacimiento:</label>
+                <input type="date" id="birth-date" placeholder="Fecha de Nacimiento" required>
+                
+                <label for="admission-date">Fecha de Ingreso:</label>
+                <input type="date" id="admission-date" placeholder="Fecha de Ingreso" required>
+                
+                <button type="submit">Guardar</button>
+                <button type="button" class="close">Cerrar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 IPS Corazón de Arte Terapia. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

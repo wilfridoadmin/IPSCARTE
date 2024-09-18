@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Detalles del Paciente - IPS Corazón de Arte Terapia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #details-area {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #details-list {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .file-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007BFF;
+            text-align: center;
+        }
+        .ips-name {
+            font-size: 2em;
+            color: #28A745;
+            text-align: center;
+        }
+        .patient-info {
+            border: 1px solid #007BFF;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .detail-item button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="ips-name">IPS Corazón de Arte Terapia</h1>
+    </header>
+    <main>
+        <div class="patient-info">
+            <h2 id="patient-name"></h2>
+            <p><strong>Edad:</strong> <span id="patient-age"></span></p>
+            <p><strong>Tipo de Documento:</strong> <span id="patient-doc-type"></span></p>
+            <p><strong>Número de Documento:</strong> <span id="patient-doc-number"></span></p>
+        </div>
+        
+        <div>
+            <button id="history-btn">Historia Clínica</button>
+            <button id="order-btn">Orden</button>
+            <button id="evolution-btn">Evolución</button>
+        </div>
+        
+        <div id="details-area" style="display:none;">
+            <label for="date-selector">Selecciona Fecha:</label>
+            <input type="date" id="date-selector">
+            <h3>Detalles</h3>
+            <textarea id="details-text" rows="5" placeholder="Escribe aquí..."></textarea>
+            <button id="save-details-btn">Guardar</button>
+            <button id="cancel-details-btn">Cancelar</button>
+        </div>
+        
+        <div id="details-list">
+            <h3>Detalles Guardados</h3>
+            <ul id="details-items">
+                <!-- Detalles se agregarán aquí -->
+            </ul>
+        </div>
+        
+        <button id="final-save-btn">Guardar Cambios</button>
+        <button id="cancel-btn">Cancelar</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IPS Corazón de Arte Terapia. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="details.js"></script>
+</body>
+</html>
+
+
+
