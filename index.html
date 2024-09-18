@@ -16,7 +16,18 @@
             </ul>
         </nav>
     </header>
-    <main>
+
+    <div id="login-container" class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <input type="text" placeholder="Usuario" id="username" required>
+            <input type="password" placeholder="Contraseña" id="password" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p class="contact-info">+57 3245613850 (Creador y Diseñador de la Página)</p>
+    </div>
+
+    <main id="main-content" style="display: none;">
         <div class="services">
             <h2>Nuestros Servicios</h2>
             <ul>
@@ -26,7 +37,6 @@
                 <li>Asistencia en Tareas</li>
             </ul>
         </div>
-        
 
         <section>
             <h2>Lista de Pacientes</h2>
@@ -78,10 +88,10 @@
                 <input type="number" id="patient-age" placeholder="Edad" required>
                 
                 <label for="birth-date">Fecha de Nacimiento:</label>
-                <input type="date" id="birth-date" placeholder="Fecha de Nacimiento" required>
+                <input type="date" id="birth-date" required>
                 
                 <label for="admission-date">Fecha de Ingreso:</label>
-                <input type="date" id="admission-date" placeholder="Fecha de Ingreso" required>
+                <input type="date" id="admission-date" required>
                 
                 <button type="submit">Guardar</button>
                 <button type="button" class="close">Cerrar</button>
