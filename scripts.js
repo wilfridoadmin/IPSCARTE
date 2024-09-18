@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const user = localStorage.getItem("user");
     if (!user) {
-        window.location.href = "login.html"; // Redirigir si no hay sesión
+        document.getElementById("login-container").style.display = "block";
+        document.getElementById("main-content").style.display = "none";
     } else {
         cargarPacientes(); // Cargar pacientes si está logueado
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
     }
 
     const addPatientBtn = document.getElementById("add-patient-btn");
@@ -101,4 +104,3 @@ function verDetalles(nombre) {
         window.location.href = "details.html";
     }
 }
-
